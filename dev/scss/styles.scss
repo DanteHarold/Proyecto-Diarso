@@ -1,0 +1,18 @@
+//Config
+@import 'config/colors.scss';
+@import 'config/fonts.scss';
+
+//Base
+@import 'base/base.scss';
+@import 'base/normalize.scss';
+
+//Pages
+@import 'pages/ayuda.scss';
+
+//Blocks
+@import 'blocks/_header.scss';
+@import 'blocks/_sidebar.scss';
+@import 'blocks/_main.scss';
+@import 'blocks/_footer.scss';
+
+

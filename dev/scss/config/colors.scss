@@ -1,0 +1,12 @@
+:root {
+    --text-color: #343434;
+    --dark-color-2: #666;
+    --dark-color: #000;
+    --white-color: #fff;
+    --background-color: #EAEDEF;
+  }
+  $background-color: var(--background-color);
+  $dark-color-2: var(--dark-color-2);
+  $text-color: var(--text-color);
+  $white-color: var(--white-color);
+  $dark-color: var(--dark-color);
