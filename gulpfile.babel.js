@@ -56,7 +56,7 @@ gulp.task("babel", () => {
 gulp.task('default', () => {
   //Iniciación del servidor en el puerto 80
   server.init({
-    proxy : "localhost/Proyecto-Diarso/public"
+    proxy : "localhost/Proyecto-Diarso"
   })
 
   //Watchers (vigilantes) para vigilar los cambios y mostrarlos en tiempo real
