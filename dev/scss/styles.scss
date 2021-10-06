@@ -1,3 +1,7 @@
+//Mixins
+@import 'mixins/breakpoints.scss';
+@import 'mixins/resert-list.scss';
+
 //Config
 @import 'config/colors.scss';
 @import 'config/fonts.scss';
@@ -8,11 +12,14 @@
 
 //Pages
 @import 'pages/ayuda.scss';
+@import 'pages/error.scss';
 
 //Blocks
 @import 'blocks/_header.scss';
 @import 'blocks/_sidebar.scss';
 @import 'blocks/_main.scss';
 @import 'blocks/_footer.scss';
+@import 'blocks/menu.scss';
+
 
 

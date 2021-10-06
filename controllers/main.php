@@ -7,6 +7,11 @@
             //echo "<p>Nuevo Controlador MAIN</p>";
         }
         //Metodos
+        public function hola(){
+
+            echo "hola";
+        }
+        
     }
 
 

@@ -1,12 +1,17 @@
 .container-ayuda{
-    position: absolute;
-    height: 100px;
-    width: 300px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(155, 201, 155);
+    
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    h2{
+        font-family: $main-title;
+        position: absolute;
+        top: 10%;
+    }
+    p{  
+        font-family: $main-text;
+    }
 }

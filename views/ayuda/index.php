@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda</title>
-    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
 </head>
 <body>
-    <div>
-        <h1>Sección De Ayuda</h1>
+    <div class="container-ayuda">
+        <h2>Sección De Ayuda</h2>
         <p>Aca encontraras todo lo relacionado para manejar este sistema correctamente :)</p>
     </div>    
 </body>
