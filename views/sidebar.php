@@ -1,14 +1,21 @@
+<?php
+    $pages = array('fas fa-home' => 'main','fas fa-hands' => 'productos','fas fa-user-check'=>'empleados','fas fa-user-tag'=>'clientes','fas fa-shopping-bag'=>'pedidos','fas fa-users'=>'usuarios','fas fa-clipboard'=>'reportes','fas fa-shopping-cart'=>'compras','fas fa-user-friends'=>'proveedores','fas fa-bacteria'=>'materiales');
+?>
 <div class="sidebar">
+    <nav class="main-nav">
         <ul class="main-menu">
-            <li><a href="<?php echo constant('URL'); ?>main">Inicio</a></li>
-            <li><a href="<?php echo constant('URL'); ?>productos">Productos</a></li>
-            <li><a href="<?php echo constant('URL'); ?>empleados">Empleados</a></li>
-            <li><a href="<?php echo constant('URL'); ?>clientes">Clientes</a></li>
-            <li><a href="<?php echo constant('URL'); ?>pedidos">Pedidos</a></li>
-            <li><a href="<?php echo constant('URL'); ?>usuarios">Usuarios</a></li>
-            <li><a href="<?php echo constant('URL'); ?>reportes">Reportes</a></li>
-            <li><a href="<?php echo constant('URL'); ?>compras">Compras</a></li>
-            <li><a href="<?php echo constant('URL'); ?>proveedores">Proveedores</a></li>
-            <li><a href="<?php echo constant('URL'); ?>materiales">Materiales</a></li>
+            <?php         
+                foreach ($pages as $icon => $page) {
+                    if($page=="main"){
+                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">home</a></li>';
+                    }else{
+                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">'.$page.'</a></li>';
+                    }
+                }
+                ?>
+            <!-- <li class="main-menu__item"><i class="fas fa-user-check main-menu__icon"></i><a class="main-menu__link" href="/Proyecto_DIARSO/public/empleados.html">empleados</a><span class="tooltip">empleados</span> -->
+            <!-- <li><a href="<?php //echo constant('URL'); ?>main">Inicio</a></li> -->
         </ul>
+    </nav>
 </div>
+    
