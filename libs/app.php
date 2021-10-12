@@ -12,6 +12,7 @@
                 $archivoController = 'controllers/main.php';
                 require_once $archivoController;
                 $controller = new Main();
+                $controller->loadModel('main');
                 return false;
             }
             
@@ -21,7 +22,7 @@
 
                 require_once $archivoController;
                 $controller = new $url[0];
-
+                $controller->loadModel($url[0]);
                 if(isset($url[1])){
                     //Llama al metódo -> convierte a metodo
                     $controller->{$url[1]}();

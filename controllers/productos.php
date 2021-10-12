@@ -5,7 +5,19 @@
             parent::__construct();
             $this->view->render('productos/index');
         }
-        //Metodos
+        function registrarProducto(){
+            $name =     $_POST['name'];
+            $surname =  $_POST['surname'];
+            $email =    $_POST['email'];
+            
+            if($this->model->insert(['name'=> $name , 'surname' => $surname , 'email'=> $email])){
+
+                echo "Producto Agregado";
+            }else{
+                echo "Producto No Agregado!";
+            }
+
+        }
     }
 
 
