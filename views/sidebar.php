@@ -7,9 +7,9 @@
             <?php         
                 foreach ($pages as $icon => $page) {
                     if($page=="main"){
-                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">home</a></li>';
+                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">home</a><span class="tooltip">home</span></li>';
                     }else{
-                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">'.$page.'</a></li>';
+                        echo '<li class="main-menu__item"><i class = "'.$icon.' main-menu__icon"></i><a class="main-menu__link" href="'.constant('URL').$page.'">'.$page.'</a><span class="tooltip">'.$page.'</span></li>';
                     }
                 }
                 ?>
