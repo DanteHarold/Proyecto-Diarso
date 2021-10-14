@@ -11,11 +11,9 @@
 <body>
     <?php require_once 'views/header.php';?>
     <?php require_once 'views/sidebar.php';?>
-    <!-- <main class="main">
+    <main class="main">
         <h1>Esta es la Vista de Main</h1>
-    </main> -->
-    <?php require_once 'views/main.php'; ?>
-    <?php require_once 'views/modal.php'; ?>
+    </main>
     <?php require_once 'views/footer.php';?>
     <!-- <h1>Esta es la Vista de Main</h1> -->
     <script src="<?php echo constant('URL'); ?>public/js/scripts.js"></script>

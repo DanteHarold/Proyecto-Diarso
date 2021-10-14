@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
 </head>
 <body>
+
     <?php require_once 'views/header.php';?>
     <?php require_once 'views/sidebar.php';?>
-    <main class="main">
-        <h1>Esta es la Vista de Productos</h1>
-    </main>
+    <?php require_once 'views/main.php'; ?>
+    <?php require_once 'views/modal.php'; ?>
     <?php require_once 'views/footer.php';?>
-    
+    <script src="<?php echo constant('URL'); ?>public/js/scripts.js"></script>
 </body>
 </html>

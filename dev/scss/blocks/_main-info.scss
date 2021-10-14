@@ -4,7 +4,7 @@
     margin: 0 auto;
     margin-top: 2rem;
     border: 1px solid red;
-    
+    overflow: hidden;
     .top-bar{
         display: flex;
         justify-content: space-between;
@@ -44,18 +44,27 @@
         }
     }
     .content{
+        height: 85%;
+
         &__header input{
             display: flex;
             justify-content: center;
             align-items: center;
             margin: auto;
         }
+        &__header{
+            height: 10%;
+        }
+        &__users{
+           height: 90%;
+           .content__user{
+            //    height: 100%;
+           }
+        }
         &__header,&__user{ 
             border: 1px solid red;
-            height: 85%;
             display: grid;
-            grid-template-columns: 100px repeat(3,1fr) 120px;
-           
+            grid-template-columns: 100px repeat(3,1fr) 120px;   
         }
         &__header--text,&__user--text{
             margin-top: 0;
@@ -84,6 +93,8 @@
             &--options{
                 grid-column: 5/-1;
             }
+           
         }
+        overflow-y: auto;
     }
 }
