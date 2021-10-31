@@ -12,7 +12,7 @@
                         <img class="img" src="<?php echo constant('URL');?>public/assets/img/imgperfil.jpg" alt="">
                         <div class="name">
                                 <div class="name__first">DanteHarold</div>
-                                <div class="name__job">Alumno UPN</div>
+                                <div class="name__job">Administrador</div>
                         </div>
                 </div>
                 <div class="icon"> <i class="fas fa-caret-down"></i></div>

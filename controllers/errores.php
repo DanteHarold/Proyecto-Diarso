@@ -3,7 +3,7 @@
 
         function __construct(){
             parent::__construct();
-            $this->view->mensaje = "Error al Cargar el Recurso :(";
+            $this->view->mensaje = "Ventana Aún no Disponible :(";
             $this->view->render('errores/index');
             //echo "<p>Error al Cargar Recurso</p>";
         }

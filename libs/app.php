@@ -27,13 +27,30 @@
                 $controller = new $url[0];
                 $controller->loadModel($url[0]);
 
-                //Si hay método que se requiere cargar
-                if(isset($url[1])){
-                    //Llama al metódo -> convierte a metodo
-                    $controller->{$url[1]}();
+                //Nuemro de Elementos del Arreglo
+                $nparam = sizeof($url);
+
+                if($nparam > 1){
+                    if($nparam > 2){
+                        $param = [];
+                        for ($i=2; $i < $nparam ; $i++) { 
+                            array_push($param,$url[$i]);
+                        }
+                        $controller->{$url[1]}($param);
+                    }else{
+                        $controller->{$url[1]}();
+                    }
                 }else{
                     $controller->render();
                 }
+
+                //Si hay método que se requiere cargar
+                //if(isset($url[1])){
+                    //Llama al metódo -> convierte a metodo
+                  //  $controller->{$url[1]}();
+                //}else{
+                  //  $controller->render();
+                //}
             }else{        
                 $controller = new Errores();
             }

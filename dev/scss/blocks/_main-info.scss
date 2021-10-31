@@ -3,7 +3,7 @@
     height: 80%;
     margin: 0 auto;
     margin-top: 2rem;
-    border: 1px solid red;
+   // border: 1px solid red;
     overflow: hidden;
     .top-bar{
         display: flex;
@@ -62,7 +62,7 @@
            }
         }
         &__header,&__user{ 
-            border: 1px solid red;
+           // border: 1px solid red;
             display: grid;
             grid-template-columns: 100px repeat(3,1fr) 120px;   
         }
