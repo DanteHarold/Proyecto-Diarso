@@ -1,23 +1,18 @@
 <?php
-    class Producto{
+    class Usuario{
 
         private $id;
         private $nombre;
         private $apellido;
         private $email;
-        
-        public function __construct(){
-           
-        }    
-        /*
+
         public function __construct(int $id,string $nombre,string $apellido,string $email){
             $this->id = $id;
             $this->nombre = $nombre;
             $this->apellido = $apellido;
             $this->email = $email;
         }
-        */
-        
+
         public function getId():int {
             return $this->id;
         }

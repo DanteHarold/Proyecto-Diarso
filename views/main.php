@@ -27,23 +27,20 @@
                 
                     <?php 
                         include_once 'models/producto.php';
-                        foreach($this->datos as $dato){
-                            $producto = new Producto();
-                            $producto = $dato;
-                        
+                        foreach($this->datos as $producto){                                  
                     ?>
                 <div id="content__user" class="content__user" >
-                    <p class="content__user--text nombre" data-name="<?php  echo $producto->nombre ; ?>" ><?php echo $producto->nombre; ?> </p>
-                    <p class="content__user--text apellido"><?php echo $producto->apellido ;  ?></p>
-                    <p class="content__user--text email "><?php echo $producto->email ; ?></p>
+                    <p class="content__user--text nombre" data-name="<?php  echo $producto->getNombre(); ?>" ><?php echo $producto->getNombre(); ?> </p>
+                    <p class="content__user--text apellido"><?php echo $producto->getApellido(); ;  ?></p>
+                    <p class="content__user--text email "><?php echo $producto->getEmail(); ; ?></p>
                     <div id="options" class="content__user--options">
-                        <a href="<?php echo constant('URL').'productos/actualizarProducto/'.$producto->id; ?>" class="content__user--link edit" id="edit" data-type="hola">
+                        <a href="<?php echo constant('URL').'productos/actualizarProducto/'.$producto->getId();; ?>" class="content__user--link edit" id="edit" data-type="hola">
                             <i class="fas fa-pen"></i>
                         </a>
-                        <a href="<?php echo constant('URL').'productos/eliminarProducto/'.$producto->id; ?>"  class="content__user--link delete" id="delete">     
+                        <a href="<?php echo constant('URL').'productos/eliminarProducto/'.$producto->getId();; ?>"  class="content__user--link delete" id="delete">     
                             <i class="fas fa-trash"></i>
                         </a>
-                        <a href="<?php echo constant('URL').'productos/verProducto/'.$producto->id; ?>"  class="content__user--link view" id="view">     
+                        <a href="<?php echo constant('URL').'productos/verProducto/'.$producto->getId();; ?>"  class="content__user--link view" id="view">     
                             <i class="fas fa-eye"></i>
                         </a>
                     </div>

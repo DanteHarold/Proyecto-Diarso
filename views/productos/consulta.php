@@ -18,15 +18,15 @@
             <div class="form__content">
                 <div class="form__field">
                     <label for="name" class="form__label">Nombre</label>
-                    <input type="text" id="form-name" disabled name="name" value="<?php echo $this->producto->nombre; ?>" class="form__input">
+                    <input type="text" id="form-name" disabled name="name" value="<?php echo $this->producto->getNombre(); ?>" class="form__input">
                 </div>
                 <div class="form__field">
                     <label for="surname" class="form__label">Apellidos</label>
-                    <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->producto->apellido; ?>" required class="form__input">
+                    <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->producto->getApellido(); ?>" required class="form__input">
                 </div>
                 <div class="form__field">
                     <label for="email" class="form__label">Correo</label>
-                    <input type="email" id="form-email" disabled name="email" value="<?php echo $this->producto->email; ?>" required class="form__input">
+                    <input type="email" id="form-email" disabled name="email" value="<?php echo $this->producto->getEmail(); ?>" required class="form__input">
                 </div>
                 <div class="form__field">
                     <input type="submit" value="Enviar"  class="form__submit">

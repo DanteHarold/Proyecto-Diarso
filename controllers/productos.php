@@ -10,7 +10,6 @@
             //$productos = $this->view->datos = $this->model->get();
             $productos = $this->model->get();
             $this->view->datos = $productos;
-            
             $this->view->render('productos/index');
         }
         function registrarProducto(){
@@ -38,7 +37,7 @@
             //CARGA LOS DATOS DE FONDO
             $productos = $this->model->get();
             $this->view->datos = $productos;
-
+            
             session_start();
             $_SESSION['id_producto'] =  $idProducto;
             $this->view->mensaje = "DETALLE DEL ALUMNO ".$_SESSION['id_producto'] ;
@@ -71,10 +70,10 @@
             if($this->model->update(['id'=>$idProducto,'name'=>$name,'surname'=>$surname,'email'=>$email])){
                 
                 $producto = new Producto();
-                $producto->id = $idProducto;
-                $producto->nombre = $name;
-                $producto->apellido = $surname;
-                $producto->email = $email;
+                $producto->setId($idProducto);
+                $producto->setNombre($name);
+                $producto->setApellido($surname);
+                $producto->setEmail($email);
 
                 $this->view->producto = $producto;
                 $this->view->mensaje = "actualizado correctamente";
