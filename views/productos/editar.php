@@ -12,22 +12,30 @@
 
     <?php require_once 'views/header.php';?>
     <?php require_once 'views/sidebar.php';?>
-    <?php require_once 'views/main.php'; ?>
+    <?php require_once 'main.php'; ?>
     <div id="modal" class="lightBox lightBox--show">
         <form action="<?php echo constant('URL') ?>productos/editarProducto" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje;?></h2>
             <div class="form__content">
                 <div class="form__field">
-                    <label for="name" class="form__label">Nombre</label>
-                    <input type="text" id="form-name"  name="name" value="<?php echo $this->producto->getNombre(); ?>" class="form__input">
+                    <label for="name" class="form__label">Descripcion</label>
+                    <input type="text" id="form-name" name="descripcion" value="<?php echo $this->producto->getDescripcion(); ?>" class="form__input">
                 </div>
                 <div class="form__field">
-                    <label for="surname" class="form__label">Apellidos</label>
-                    <input type="text" id="form-surname" name="surname" value="<?php echo $this->producto->getApellido(); ?>" required class="form__input">
+                    <label for="surname" class="form__label">Categoria</label>
+                    <input type="text" id="form-surname" name="categoria" value="<?php echo $this->producto->getCategoria(); ?>" required class="form__input">
                 </div>
                 <div class="form__field">
-                    <label for="email" class="form__label">Correo</label>
-                    <input type="email" id="form-email"  name="email" value="<?php echo $this->producto->getEmail(); ?>" required class="form__input">
+                    <label for="email" class="form__label">Fecha</label>
+                    <input type="text" id="form-email" name="fecha" value="<?php echo $this->producto->getFecha(); ?>" required class="form__input">
+                </div>
+                <div class="form__field">
+                    <label for="surname" class="form__label">Precio</label>
+                    <input type="text" id="form-surname" name="precio" value="<?php echo $this->producto->getPrecio(); ?>" required class="form__input">
+                </div>
+                <div class="form__field">
+                    <label for="email" class="form__label">Stock</label>
+                    <input type="number" id="form-email" name="stock" value="<?php echo $this->producto->getStock(); ?>" required class="form__input">
                 </div>
                 <div class="form__field">
                     <input type="submit" value="Enviar" class="form__submit">

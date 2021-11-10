@@ -1,5 +1,5 @@
 <?php
-    $pages = array('fas fa-home' => 'main','fas fa-hands' => 'productos','fas fa-user-check'=>'empleados','fas fa-user-tag'=>'clientes','fas fa-shopping-bag'=>'pedidos','fas fa-users'=>'usuarios','fas fa-clipboard'=>'reportes','fas fa-shopping-cart'=>'compras','fas fa-user-friends'=>'proveedores','fas fa-bacteria'=>'materiales');
+    $pages = array('fas fa-home' => 'main','fas fa-hands' => 'productos','fas fa-user-check'=>'empleados','fas fa-user-tag'=>'clientes','fas fa-shopping-bag'=>'pedidos','fas fa-users'=>'usuarios','fas fa-shopping-cart'=>'compras','fas fa-user-friends'=>'proveedores','fas fa-bacteria'=>'materiales');
 ?>
 <div class="sidebar">
     <nav class="main-nav">

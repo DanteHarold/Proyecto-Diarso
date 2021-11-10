@@ -9,7 +9,6 @@ const deleteUser = document.getElementById('delete')
 const viewUser = document.getElementById('view')
 const modal = document.getElementById('modal')
 
-
 const searchText = document.getElementById('search-text');
 
 menu.addEventListener('click',()=>{
@@ -24,11 +23,14 @@ menu.addEventListener('click',()=>{
 //         console.log(e);
 //     })
 // }
+/*
 topbar.addEventListener('click',(e)=>{
     if(e.target.classList.contains('fa-plus')){
         modal.classList.toggle('lightBox--show')
     }
 })
+*/
+
 main.addEventListener('click',(e)=>{
     console.log(e);
     if(e.target.classList.contains('fa-pen')){
@@ -39,13 +41,15 @@ main.addEventListener('click',(e)=>{
        // modal.classList.toggle('lightBox--show')
     }
 })
-modal.addEventListener('click',(e)=>{
-    if(e.target.classList.contains('lightBox')){
-        modal.classList.toggle('lightBox--show')
-    }
-})
 
-
+if(modal){
+    modal.addEventListener('click',(e)=>{
+        if(e.target.classList.contains('lightBox')){
+            modal.classList.toggle('lightBox--show')
+        }
+    })
+}
+    
 let allnames = Array.from(document.querySelectorAll('[data-name]'));
 console.log(allnames);
 

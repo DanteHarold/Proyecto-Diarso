@@ -10,16 +10,24 @@
             //$productos = $this->view->datos = $this->model->get();
             $productos = $this->model->get();
             $this->view->datos = $productos;
+            $this->view->mensaje = "Productos Actualmente";
             $this->view->render('productos/index');
         }
+        function agregarProducto(){
+            $productos = $this->model->get();
+            $this->view->datos = $productos;
+            $this->view->render('productos/registro');
+        }
         function registrarProducto(){
-            $name =     $_POST['name'];
-            $surname =  $_POST['surname'];
-            $email =    $_POST['email'];
+            $descripcion =     $_POST['descripcion'];
+            $categoria =  $_POST['categoria'];
+            $fecha =    $_POST['fecha'];
+            $precio =  $_POST['precio'];
+            $stock =    $_POST['stock'];
             
             $mensaje = "";
 
-            if($this->model->insert(['name'=> $name , 'surname' => $surname , 'email'=> $email])){
+            if($this->model->insert(['descripcion'=> $descripcion , 'categoria' => $categoria , 'fecha'=> $fecha,'precio' => $precio , 'stock'=> $stock])){
 
                 $mensaje = "Producto Agregado";
             }else{
@@ -63,20 +71,24 @@
         function editarProducto(){
             session_start();
             $idProducto =  $_SESSION['id_producto'];
-            $name =     $_POST['name'];
-            $surname =  $_POST['surname'];
-            $email =    $_POST['email'];
+            $descripcion =     $_POST['descripcion'];
+            $categoria =  $_POST['categoria'];
+            $fecha =    $_POST['fecha'];
+            $precio =    $_POST['precio'];
+            $stock =    $_POST['stock'];
 
-            if($this->model->update(['id'=>$idProducto,'name'=>$name,'surname'=>$surname,'email'=>$email])){
+            if($this->model->update([ 'id' => $idProducto,'descripcion'=> $descripcion , 'categoria' => $categoria , 'fecha'=> $fecha,'precio' => $precio , 'stock'=> $stock])){
                 
                 $producto = new Producto();
                 $producto->setId($idProducto);
-                $producto->setNombre($name);
-                $producto->setApellido($surname);
-                $producto->setEmail($email);
+                $producto->setDescripcion($descripcion);
+                $producto->setCategoria($categoria);
+                $producto->setFecha($fecha);
+                $producto->setPrecio($precio);
+                $producto->setStock($stock);
 
                 $this->view->producto = $producto;
-                $this->view->mensaje = "actualizado correctamente";
+                $this->view->mensaje = "Actualizado correctamente";
             }else{
                 $this->view->mensaje = "No actualizado";
             }
@@ -91,7 +103,7 @@
             $idProducto = $param[0];
             
             if($this->model->delete($idProducto)){
-                $this->view->mensaje = "actualizado";
+                $this->view->mensaje = "Actualizado";
             }else{
                 $this->view->mensaje = "No actualizado";
             }

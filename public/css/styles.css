@@ -125,6 +125,58 @@ template { display: none; }
 
 .container-error { grid-column: 1/-1; grid-row: 1/-1; color: var(--alert-color); margin: auto; }
 
+.content { height: 85%; overflow-y: auto; }
+
+.content__header input { display: flex; justify-content: center; align-items: center; margin: auto; }
+
+.content__header--usuario { height: 8%; }
+
+.content__users { height: 90%; }
+
+.content__header--usuario, .content__user { display: grid; grid-template-columns: 100px repeat(3, 1fr) 120px; }
+
+.content__header--text { background-color: #fcc7e0; }
+
+.content__header--text, .content__user--text { margin-top: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid black; }
+
+.content__user--options { display: flex; align-items: center; justify-content: space-evenly; }
+
+.content__user .nombre { grid-column: 2/3; }
+
+.content__user .apellido { grid-column: 3/4; }
+
+.content__user .email { grid-column: 4/5; }
+
+.content__user--options { grid-column: 5/-1; }
+
+.content { height: 85%; overflow-y: auto; }
+
+.content__header input { display: flex; justify-content: center; align-items: center; margin: auto; }
+
+.content__header--producto { height: 8%; }
+
+.content__productos { height: 90%; }
+
+.content__header--producto, .content__producto { display: grid; grid-template-columns: 100px repeat(5, 1fr) 120px; }
+
+.content__header--text { background-color: #fcc7e0; }
+
+.content__header--text, .content__user--text { margin-top: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid black; }
+
+.content__producto--options { display: flex; align-items: center; justify-content: space-evenly; }
+
+.content__producto .descripcion { grid-column: 2/3; }
+
+.content__producto .categoria { grid-column: 3/4; }
+
+.content__producto .fecha { grid-column: 4/5; }
+
+.content__producto .precio { grid-column: 5/6; }
+
+.content__producto .stock { grid-column: 6/7; }
+
+.content__producto--options { grid-column: 7/-1; }
+
 .header { background-color: var(--background-color); position: relative; height: 60px; }
 
 @media screen and (min-width: 1024px) { .header { display: flex; align-items: center; justify-content: center; grid-column: 1/-1; grid-row: 1 / 2; } }
@@ -206,28 +258,6 @@ template { display: none; }
 .all-users .top-bar__buttons .search input { color: "Roboto"; font-size: 1rem; text-align: center; border: none; outline: none; background: none; border-bottom: 2px solid olivedrab; }
 
 .all-users .top-bar__buttons .user-info { font-size: 24px; width: 2rem; height: 2rem; line-height: 2rem; text-align: center; background-color: #56d356; }
-
-.all-users .content { height: 85%; overflow-y: auto; }
-
-.all-users .content__header input { display: flex; justify-content: center; align-items: center; margin: auto; }
-
-.all-users .content__header { height: 10%; }
-
-.all-users .content__users { height: 90%; }
-
-.all-users .content__header, .all-users .content__user { display: grid; grid-template-columns: 100px repeat(3, 1fr) 120px; }
-
-.all-users .content__header--text, .all-users .content__user--text { margin-top: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid black; }
-
-.all-users .content__user--options { display: flex; align-items: center; justify-content: space-evenly; }
-
-.all-users .content__user .nombre { grid-column: 2/3; }
-
-.all-users .content__user .apellido { grid-column: 3/4; }
-
-.all-users .content__user .email { grid-column: 4/5; }
-
-.all-users .content__user--options { grid-column: 5/-1; }
 
 .lightBox { position: fixed; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.88); z-index: 1; display: flex; align-items: center; justify-content: center; transform: scale(0); transition: transform 0.5s; }
 

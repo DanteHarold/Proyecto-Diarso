@@ -5,13 +5,8 @@
         private $nombre;
         private $apellido;
         private $email;
-
-        public function __construct(int $id,string $nombre,string $apellido,string $email){
-            $this->id = $id;
-            $this->nombre = $nombre;
-            $this->apellido = $apellido;
-            $this->email = $email;
-        }
+        private $username;
+        private $password;
 
         public function getId():int {
             return $this->id;
@@ -42,6 +37,20 @@
     
         public function setEmail(string $email) {
             $this->email = $email;
+        }
+        public function getUsername():string {
+            return $this->username;
+        }
+    
+        public function setUsername(string $username) {
+            $this->username = $username;
+        }
+        public function getPassword():string {
+            return $this->password;
+        }
+    
+        public function setPassword(string $password) {
+            $this->password = $password;
         }
 
     }

@@ -2,9 +2,11 @@
     class Producto{
 
         private $id;
-        private $nombre;
-        private $apellido;
-        private $email;
+        private $descripcion;
+        private $categoria;
+        private $fecha;
+        private $precio;
+        private $stock;
         
         public function __construct(){
            
@@ -26,27 +28,41 @@
             $this->id = $id;
         }
     
-        public function getNombre():string {
-            return $this->nombre;
+        public function getDescripcion():string {
+            return $this->descripcion;
         }
     
-        public function setNombre(string $nombre) {
-            $this->nombre = $nombre;
+        public function setDescripcion(string $descripcion) {
+            $this->descripcion = $descripcion;
         }
-        public function getApellido():string {
-            return $this->apellido;
-        }
-    
-        public function setApellido(string $apellido) {
-            $this->apellido = $apellido;
+        public function getCategoria():string {
+            return $this->categoria;
         }
     
-        public function getEmail():string {
-            return $this->email;
+        public function setCategoria(string $categoria) {
+            $this->categoria = $categoria;
         }
     
-        public function setEmail(string $email) {
-            $this->email = $email;
+        public function getFecha():string {
+            return $this->fecha;
+        }
+    
+        public function setFecha(string $fecha) {
+            $this->fecha = $fecha;
+        }
+        public function getPrecio():float {
+            return $this->precio;
+        }
+    
+        public function setPrecio(float $precio) {
+            $this->precio = $precio;
+        }
+        public function getStock():int {
+            return $this->stock;
+        }
+    
+        public function setStock(int $stock) {
+            $this->stock = $stock;
         }
 
     }
