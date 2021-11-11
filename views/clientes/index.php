@@ -11,10 +11,8 @@
 <body>
     <?php require_once 'views/header.php';?>
     <?php require_once 'views/sidebar.php';?>
-    <main class="main">
-        <h1>Esta es la Vista de Clientes</h1>
-    </main>
+    <?php require_once 'main.php';?>
     <?php require_once 'views/footer.php';?>
-    
+    <script src="<?php echo constant('URL'); ?>public/js/scripts.js"></script>
 </body>
 </html>

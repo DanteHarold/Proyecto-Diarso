@@ -2,6 +2,8 @@
     require_once("IConexion.php");
     require_once("models/database.php");
     require_once("models/producto.php");
+    require_once("models/empleado.php");
+    require_once("models/cliente.php");
     require_once("models/usuario.php");
     class ConexionFabrica{
         public function getConexion($obj){

@@ -14,6 +14,8 @@ const browserSync = require('browser-sync')
 //Instancia del servidor de desarrollo
 const server = browserSync.create()
 
+
+
 gulp.task('pug', () => {
   return gulp.src('./dev/views/pages/*.pug')
     .pipe(pug({
@@ -21,6 +23,9 @@ gulp.task('pug', () => {
     }))
     .pipe(gulp.dest('./public/'))
 })
+
+
+
 
 //tarea para los estilos de la UX
 gulp.task("styles", () => {
