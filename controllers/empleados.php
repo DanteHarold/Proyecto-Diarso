@@ -118,6 +118,39 @@
             $this->render();
 
         }
+        function agregarCompra($param = null){
+
+            require_once 'models/proveedoresmodel.php';
+            $proveedores = new proveedoresModel();
+            $this->view->datosProveedores = $proveedores->get();
+
+            require_once 'models/materialesmodel.php';
+            $materiales = new materialesModel();
+            $this->view->datosMateriales = $materiales->get();
+
+            $idEmpleado = $param[0];
+            $empleado = $this->model->getById($idEmpleado);
+            $this->view->empleado = $empleado;
+
+            $empleados = $this->model->get();
+            $this->view->datos = $empleados;
+            $this->view->render('empleados/registroCompra');
+            
+        }
+        function verificarCompra($param = null){
+            require_once 'models/materialesmodel.php';
+            $materiales = new materialesModel();
+            $idMaterial = $param[0];
+            $material = $materiales->getById($idMaterial);
+
+
+            $ajaxMateriales = array('id' => $idMaterial,
+            'descripcion' => $material->getDescripcion(),
+            'precio' => $material->getPrecio());
+        
+
+            echo json_encode($ajaxMateriales);
+        }
     }
 
 

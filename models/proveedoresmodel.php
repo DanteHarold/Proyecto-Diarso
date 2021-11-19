@@ -61,12 +61,13 @@
             $proveedor =  $this->fabrica->getConexion("Proveedor");
             $db = $this->fabrica->getConexion("Conexion");  
             try{
-                $sql = "SELECT nombre_proveedor,direccion_proveedor,fecha_proveedor,email_proveedor,telefono_proveedor from proveedores where id_proveedor=:id;";
+                $sql = "SELECT id_proveedor,nombre_proveedor,direccion_proveedor,fecha_proveedor,email_proveedor,telefono_proveedor from proveedores where id_proveedor=:id;";
                 $query = $db->connect()->prepare($sql);
 
                 $query->execute(['id'=>$id]);
 
                 while($row = $query->fetch()){
+                    $proveedor->setId($row['id_proveedor']);
                     $proveedor->setNombre($row['nombre_proveedor']);
                     $proveedor->setDireccion($row['direccion_proveedor']);
                     $proveedor->setFecha($row['fecha_proveedor']);

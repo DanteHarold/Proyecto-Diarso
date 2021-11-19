@@ -58,12 +58,13 @@
             $material =  $this->fabrica->getConexion("Material");
             $db = $this->fabrica->getConexion("Conexion");  
             try{
-                $sql = "SELECT descripcion_material,fecha_material,precio_material,stock_material from materiales where id_material=:id;";
+                $sql = "SELECT id_material,descripcion_material,fecha_material,precio_material,stock_material from materiales where id_material=:id;";
                 $query = $db->connect()->prepare($sql);
 
                 $query->execute(['id'=>$id]);
 
                 while($row = $query->fetch()){
+                    $material->setId($row['id_material']);
                     $material->setDescripcion($row['descripcion_material']);
                     $material->setFecha($row['fecha_material']);
                     $material->setPrecio($row['precio_material']);

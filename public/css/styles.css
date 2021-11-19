@@ -177,6 +177,54 @@ template { display: none; }
 
 .content__producto--options { grid-column: 7/-1; }
 
+.content__producto .nombre-cliente { grid-column: 2/3; }
+
+.content__producto .apellido-cliente { grid-column: 3/4; }
+
+.content__producto .dni-cliente { grid-column: 4/5; }
+
+.content__producto .fecha-cliente { grid-column: 5/6; }
+
+.content__producto .pedido-cliente { grid-column: 6/7; }
+
+.content__producto a { text-decoration: none; }
+
+.content__producto .pedido { border: 1px solid red; border-radius: 15px; min-height: 100%; max-width: 80%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--dark-color); font-family: "Roboto"; font-weight: 500; background-color: #fcc7e0; margin: auto; }
+
+.content-pedido { height: 40%; overflow-y: auto; }
+
+.content-pedido__header--producto { height: 8%; }
+
+.content-pedido__pedido { height: 50%; }
+
+.content-pedido__header--pedido, .content-pedido__pedido { display: grid; grid-template-columns: repeat(4, 1fr) 120px; }
+
+.content-pedido__header--text { background-color: #fcc7e0; min-width: 9vw; }
+
+.content-pedido__header--text, .content-pedido__user--text { margin-top: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid black; }
+
+.content-pedido__pedido--options { display: flex; align-items: center; justify-content: space-evenly; }
+
+.content-pedido__pedido .nombreP { grid-column: 1/2; }
+
+.content-pedido__pedido .precioP { grid-column: 2/3; }
+
+.content-pedido__pedido .cantidadP { grid-column: 3/4; }
+
+.content-pedido__pedido .cantidadP input { height: 100%; text-align: center; }
+
+.content-pedido__pedido .totalP { grid-column: 4/5; }
+
+.content-pedido__pedido--options { grid-column: 5/-1; }
+
+.form__field-pedido { position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); border: 1px solid red; text-align: center; }
+
+.btn-agregar { background-color: #fcc7e0; width: 80px; height: 25px; border-radius: 15px; box-shadow: 1px 1px #c0b4b4; }
+
+.btn-agregar a { text-decoration: none; color: var(--text-color); }
+
+.btn-agregar p { height: 5%; font-family: "Roboto"; font-weight: 400; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
+
 .header { background-color: var(--background-color); position: relative; height: 60px; }
 
 @media screen and (min-width: 1024px) { .header { display: flex; align-items: center; justify-content: center; grid-column: 1/-1; grid-row: 1 / 2; } }
@@ -263,7 +311,7 @@ template { display: none; }
 
 .lightBox--show { transform: scale(1); }
 
-.lightBox .form { background-color: var(--white-color); border: 1px solid red; height: 70%; width: 50%; }
+.lightBox .form { position: relative; background-color: var(--white-color); border: 1px solid red; height: 70%; width: 50%; }
 
 .lightBox .form__content { display: flex; flex-direction: column; align-items: center; justify-content: space-around; border: 1px solid red; margin-top: 0; height: calc(100% - 50px); top: 0; }
 

@@ -5,6 +5,10 @@
             parent::__construct();
             $this->view->mensaje = "";
             $this->view->datos = [];
+            $this->view->datosProductos = [];
+            $this->view->datosLocales = [];
+            $this->view->datosEmpleados = [];
+            $this->view->product = [];
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -123,6 +127,43 @@
             $this->view->datos = $clientes;
             $this->render();
 
+        }
+        function agregarPedido($param = null){
+
+            require_once 'models/empleadosmodel.php';
+            $empleados = new EmpleadosModel();
+            $this->view->datosEmpleados = $empleados->get();
+
+            require_once 'models/localesmodel.php';
+            $locales = new LocalesModel();
+            $this->view->datosLocales = $locales->get();
+
+            require_once 'models/productosmodel.php';
+            $productos = new ProductosModel();
+            $this->view->datosProductos = $productos->get();
+
+            $idCliente = $param[0];
+            $cliente = $this->model->getById($idCliente);
+            $this->view->cliente = $cliente;
+
+            $clientes = $this->model->get();
+            $this->view->datos = $clientes;
+            $this->view->render('clientes/registroPedido');
+            
+        }
+        function verificarPedido($param = null){
+            require_once 'models/productosmodel.php';
+            $productos = new ProductosModel();
+            $idProducto2 = $param[0];
+            $product = $productos->getById($idProducto2);
+
+
+            $ajaxProductos = array('id' => $idProducto2,
+            'descripcion' => $product->getDescripcion(),
+            'precio' => $product->getPrecio());
+        
+
+            echo json_encode($ajaxProductos);
         }
     }
 

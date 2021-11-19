@@ -12,7 +12,9 @@
     &--show{
         transform: scale(1);
     }
-    .form{
+    .form{     
+        position: relative;
+
         background-color: $white-color;
         border: 1px solid red;
         height: 70%;

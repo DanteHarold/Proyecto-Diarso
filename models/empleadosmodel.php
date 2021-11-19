@@ -74,6 +74,7 @@
                 $query->execute(['id'=>$id]);
 
                 while($row = $query->fetch()){
+                    $empleado->setId($id);
                     $empleado->setApellido($row['apellidos_empleado']);
                     $empleado->setNombre($row['nombres_empleado']);
                     $empleado->setDni($row['dni_empleado']);

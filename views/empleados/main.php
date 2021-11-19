@@ -24,7 +24,6 @@
                 <p class="content__header--text">Apellidos</p>
                 <p class="content__header--text">Dni</p>
                 <p class="content__header--text">Fecha</p>
-                <p class="content__header--text">Email</p>
             </div>
             <div class="content__clientes">    
                     <?php 
@@ -36,7 +35,7 @@
                     <p class="content__user--text categoria"><?php echo $empleado->getApellido(); ;  ?></p>
                     <p class="content__user--text fecha"><?php echo $empleado->getDni(); ; ?></p>
                     <p class="content__user--text precio"><?php echo $empleado->getFecha(); ;  ?></p>
-                    <p class="content__user--text stock"><?php echo $empleado->getEmail(); ;  ?></p>
+                    <a href="<?php echo constant('URL').'empleados/agregarCompra/'.$empleado->getId(); ?>"><div class="pedido">Crear Compra</div></a>
                     <div id="options" class="content__producto--options">
                         <a href="<?php echo constant('URL').'empleados/actualizarEmpleado/'.$empleado->getId();; ?>" class="content__user--link edit" id="edit" data-type="hola">
                             <i class="fas fa-pen"></i>

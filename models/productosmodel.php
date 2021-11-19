@@ -72,12 +72,13 @@
             $producto =  $this->fabrica->getConexion("Producto");
             $db = $this->fabrica->getConexion("Conexion");  
             try{
-                $sql = "SELECT descripcion_producto,categoria_producto,fecha_producto,precio_producto,stock_producto FROM productos where id_producto=:id;";
+                $sql = "SELECT id_producto,descripcion_producto,categoria_producto,fecha_producto,precio_producto,stock_producto FROM productos where id_producto=:id;";
                 $query = $db->connect()->prepare($sql);
 
                 $query->execute(['id'=>$id]);
 
                 while($row = $query->fetch()){
+                    $producto->setId($row['id_producto']);
                     $producto->setDescripcion($row['descripcion_producto']);
                     $producto->setCategoria($row['categoria_producto']);
                     $producto->setFecha($row['fecha_producto']);

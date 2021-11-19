@@ -80,6 +80,7 @@
                 $query->execute(['id'=>$id]);
 
                 while($row = $query->fetch()){
+                    $cliente->setId($id);
                     $cliente->setApellido($row['apellidos_cliente']);
                     $cliente->setNombre($row['nombres_cliente']);
                     $cliente->setDni($row['dni_cliente']);
