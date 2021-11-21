@@ -13,31 +13,31 @@
     <?php require_once 'views/sidebar.php';?>
     <?php require_once 'main.php'; ?>
     <div id="modal" class="lightBox lightBox--show">
-        <form action="<?php echo constant('URL') ?>productos/registrarProducto" id="form-modal" class="form" method="POST">
+        <form action="<?php echo constant('URL') ?>usuarios/registrarUsuario" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label for="name" class="form__label">Nombre</label>
+                <div class="form__field form__field-100">
+                    <label for="name" class="form__label">Nombre: </label>
                     <input type="text" id="form-name" name="name" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Apellidos</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Apellidos: </label>
                     <input type="text" id="form-surname"  name="surname" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Correo</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Correo: </label>
                     <input type="email" id="form-email"  name="email" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Username</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Username: </label>
                     <input type="text" id="form-surname" name="username" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Contraseña</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Contraseña: </label>
                     <input type="password" id="form-email" name="password" required class="form__input">
                 </div>
                 <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
+                    <input type="submit" value="Registrar Usuario"  class="form__submit">
                 </div>          
             </div>  
         </form>

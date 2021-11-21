@@ -16,20 +16,17 @@
         <form action="<?php echo constant('URL') ?>productos/registrarProducto" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
+                <div class="form__field form__field-100">
                     <label for="name" class="form__label">Nombre</label>
                     <input type="text" id="form-name" disabled name="name" value="<?php echo $this->usuario->getNombre(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-100">
                     <label for="surname" class="form__label">Apellidos</label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->usuario->getApellido(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-100">
                     <label for="email" class="form__label">Correo</label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->usuario->getEmail(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>  
         </form>

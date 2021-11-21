@@ -16,28 +16,25 @@
         <form action="<?php echo constant('URL') ?>proveedores/registrarProveedor" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <label for="name" class="form__label">Nombre</label>
                     <input type="text" id="form-name" disabled name="name" value="<?php echo $this->proveedor->getNombre(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <label for="surname" class="form__label">Direccion</label>
                     <input type="text" id="form-surname" disabled name="direccion" value="<?php echo $this->proveedor->getDireccion(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <label for="email" class="form__label">Fecha</label>
                     <input type="email" id="form-email" disabled name="fecha" value="<?php echo $this->proveedor->getFecha(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <label for="email" class="form__label">Email</label>
                     <input type="email" id="form-email" disabled name="fecha" value="<?php echo $this->proveedor->getEmail(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-100">
                     <label for="email" class="form__label">Telefono</label>
                     <input type="text" id="form-email" disabled name="fecha" value="<?php echo $this->proveedor->getTelefono(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>  
         </form>

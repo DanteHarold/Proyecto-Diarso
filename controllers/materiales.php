@@ -1,10 +1,13 @@
 <?php
     class Materiales extends Controller{
-
         function __construct(){
             parent::__construct();
             $this->view->mensaje = "";
             $this->view->datos = [];
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -45,7 +48,7 @@
             $materiales = $this->model->get();
             $this->view->datos = $materiales;
             
-            session_start();
+            
             $_SESSION['id_material'] =  $idMaterial;
             $this->view->mensaje = "DETALLE DEL MATERIAL ".$_SESSION['id_material'] ;
             
@@ -60,14 +63,13 @@
             $materiales = $this->model->get();
             $this->view->datos = $materiales;
 
-            session_start();
+            
             $_SESSION['id_material'] =  $idMaterial;
             $this->view->mensaje = "ACTUALIZANDO Materiales ".$_SESSION['id_material'] ;
 
             $this->view->render('materiales/editar');
         }
         function editarMaterial(){
-            session_start();
             $idMaterial =  $_SESSION['id_material'];
             $name =     $_POST['name'];
             $fecha =  $_POST['fecha'];

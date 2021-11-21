@@ -16,43 +16,43 @@
         <form action="<?php echo constant('URL') ?>clientes/registrarCliente" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-            <div class="form__field">
-                    <label for="name" class="form__label">Nombre</label>
-                    <input type="text" id="form-name"  name="name" class="form__input">
+            <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Nombre: </label>
+                    <input type="text" id="form-name"  name="name" class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Apellidos</label>
-                    <input type="text" id="form-surname"  name="surname" required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Apellidos: </label>
+                    <input type="text" id="form-surname"  name="surname" required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Dni</label>
-                    <input type="text" id="form-email"  name="dni"  required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Dni: </label>
+                    <input type="text" id="form-email"  name="dni"  required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
-                    <input type="text" id="form-surname"  name="fecha"  required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
+                    <input type="text" id="form-surname"  name="fecha"  required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Ciudad</label>
-                    <input type="text" id="form-email"  name="ciudad"  required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Ciudad: </label>
+                    <input type="text" id="form-email"  name="ciudad"  required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Provincia</label>
-                    <input type="text" id="form-surname"  name="provincia" required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Provincia: </label>
+                    <input type="text" id="form-surname"  name="provincia" required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Direccion</label>
-                    <input type="text" id="form-email"  name="direccion" required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Direccion: </label>
+                    <input type="text" id="form-email"  name="direccion" required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Email</label>
-                    <input type="email" id="form-surname" name="email" required class="form__input">
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Email: </label>
+                    <input type="email" id="form-surname" name="email" required class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Telefono</label>
-                    <input type="text" id="form-email"  name="telefono" required class="form__input">
+                <div class="form__field form__field-100">
+                    <label for="email" class="form__label">Telefono: </label>
+                    <input type="text" id="form-email"  name="telefono" required class="form-input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>          

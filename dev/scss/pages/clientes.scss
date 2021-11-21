@@ -21,8 +21,8 @@
         .pedido{
             border: 1px solid red;
             border-radius: 15px;
-            min-height: 100%;
-            max-width: 80%;
+            min-height: 75%;
+            max-width: 70%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -31,7 +31,9 @@
             font-family: $main-text;
             font-weight: $medium-text;
             background-color:  rgb(252, 199, 224);
-            margin: auto;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 2%;
         }  
     }
 }

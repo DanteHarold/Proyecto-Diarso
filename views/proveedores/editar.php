@@ -17,27 +17,27 @@
         <form action="<?php echo constant('URL') ?>proveedores/editarProveedor" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje;?></h2>
             <div class="form__content">
-            <div class="form__field">
-                    <label for="name" class="form__label">Descripcion</label>
+            <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Descripcion: </label>
                     <input type="text" id="form-name"  name="name" value="<?php echo $this->proveedor->getNombre(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Direccion</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Direccion: </label>
                     <input type="text" id="form-surname"  name="direccion" value="<?php echo $this->proveedor->getDireccion(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Fecha: </label>
                     <input type="text" id="form-email"  name="fecha" value="<?php echo $this->proveedor->getFecha(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Email</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Email: </label>
                     <input type="email" id="form-surname"  name="email" value="<?php echo $this->proveedor->getEmail(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Telefono</label>
+                <div class="form__field form__field-100">
+                    <label for="surname" class="form__label">Telefono: </label>
                     <input type="text" id="form-surname"  name="telefono" value="<?php echo $this->proveedor->getTelefono(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field-50">
                     <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>  

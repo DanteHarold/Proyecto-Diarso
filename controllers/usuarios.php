@@ -5,6 +5,10 @@
             parent::__construct();
             $this->view->mensaje = "";
             $this->view->datos = [];
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -46,7 +50,7 @@
             $usuarios = $this->model->get();
             $this->view->datos = $usuarios;
             
-            session_start();
+            
             $_SESSION['id_usuario'] =  $idUsuario;
             $this->view->mensaje = "DETALLE DEL Usuario ".$_SESSION['id_usuario'] ;
             
@@ -61,14 +65,13 @@
             $usuarios = $this->model->get();
             $this->view->datos = $usuarios;
 
-            session_start();
+            
             $_SESSION['id_usuario'] =  $idUsuario;
             $this->view->mensaje = "ACTUALIZANDO Usuarios ".$_SESSION['id_usuario'] ;
 
             $this->view->render('usuarios/editar');
         }
         function editarUsuario(){
-            session_start();
             $idUsuario =  $_SESSION['id_usuario'];
             $name =     $_POST['name'];
             $surname =  $_POST['surname'];

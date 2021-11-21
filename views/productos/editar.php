@@ -17,28 +17,28 @@
         <form action="<?php echo constant('URL') ?>productos/editarProducto" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje;?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label for="name" class="form__label">Descripcion</label>
-                    <input type="text" id="form-name" name="descripcion" value="<?php echo $this->producto->getDescripcion(); ?>" class="form__input">
+                <div class="form__field form__field-100">
+                    <label for="name" class="form__label">Descripcion: </label>
+                    <input type="text" id="form-name" class="form-input" name="descripcion" value="<?php echo $this->producto->getDescripcion(); ?>" class="form__input">
+                </div>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Categoria: </label>
+                    <input type="text" id="form-surname" class="form-input" name="categoria" value="<?php echo $this->producto->getCategoria(); ?>" required class="form__input">
+                </div>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Fecha: </label>
+                    <input type="text" id="form-email" class="form-input" name="fecha" value="<?php echo $this->producto->getFecha(); ?>" required class="form__input">
+                </div>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Precio: </label>
+                    <input type="text" id="form-surname" class="form-input" name="precio" value="<?php echo $this->producto->getPrecio(); ?>" required class="form__input">
+                </div>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Stock: </label>
+                    <input type="number" id="form-email" class="form-input" name="stock" value="<?php echo $this->producto->getStock(); ?>" required class="form__input">
                 </div>
                 <div class="form__field">
-                    <label for="surname" class="form__label">Categoria</label>
-                    <input type="text" id="form-surname" name="categoria" value="<?php echo $this->producto->getCategoria(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Fecha</label>
-                    <input type="text" id="form-email" name="fecha" value="<?php echo $this->producto->getFecha(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Precio</label>
-                    <input type="text" id="form-surname" name="precio" value="<?php echo $this->producto->getPrecio(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Stock</label>
-                    <input type="number" id="form-email" name="stock" value="<?php echo $this->producto->getStock(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar" class="form__submit">
+                    <input type="submit" value="Editar Producto" class="form__submit">
                 </div>
             </div>  
         </form>

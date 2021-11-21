@@ -5,6 +5,10 @@
             parent::__construct();
             $this->view->mensaje = "";
             $this->view->datos = [];
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -47,7 +51,7 @@
             $proveedores = $this->model->get();
             $this->view->datos = $proveedores;
             
-            session_start();
+            
             $_SESSION['id_proveedor'] =  $idProveedor;
             $this->view->mensaje = "Detalle Del Proveedor ".$_SESSION['id_proveedor'] ;
             
@@ -62,14 +66,13 @@
             $proveedores = $this->model->get();
             $this->view->datos = $proveedores;
 
-            session_start();
+            
             $_SESSION['id_proveedor'] =  $idProveedor;
             $this->view->mensaje = "ACTUALIZANDO Usuarios ".$_SESSION['id_proveedor'] ;
 
             $this->view->render('proveedores/editar');
         }
         function editarProveedor(){
-            session_start();
             $idProveedor =  $_SESSION['id_proveedor'];
             $name =     $_POST['name'];
             $direccion =  $_POST['direccion'];

@@ -16,14 +16,14 @@
         <form action="<?php echo constant('URL') ?>compras/registrarCompra" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label class="form__label">Empleado</label>
-                    <input type="list"  value="<?php echo $empleado->getNombre().'-'.$empleado->getId(); ?>" name="empleado" class="form__input">
+                <div class="form__field form__field-50">
+                    <label class="form__label">Empleado: </label>
+                    <input type="list"  value="<?php echo $empleado->getNombre().'-'.$empleado->getId(); ?>" name="empleado" class="form-input">
                 </div>
-                <div class="form__field">
-                    <label for="name" class="form__label">Proveedor</label>
+                <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Proveedor: </label>
                     <!-- <input type="text" id="form-name"  name="name" class="form__input"> -->
-                    <input type="list" list="empleados" name ="proveedor" autocomplete = "off">
+                    <input type="list" list="empleados" name ="proveedor" autocomplete = "off" class="form__input">
                     <datalist id="empleados">
                         <?php 
                             //include_once 'models/producto.php';
@@ -33,14 +33,14 @@
                         <?php } ?>
                     </datalist>
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
-                    <input type="list" name ="fecha">
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
+                    <input type="list" name ="fecha" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="locales" class="form__label">Material</label>
+                <div class="form__field form__field-50">
+                    <label for="locales" class="form__label">Material: </label>
                     <!-- <input type="text" id="form-surname"  name="surname" required class="form__input"> -->
-                    <input id="datalist-id" type="list" list="locales" name ="material" autocomplete = "off">
+                    <input id="datalist-id" type="list" list="locales" name ="material" autocomplete = "off" class="form__input">
                     <datalist id="locales">
                         <?php 
                             //include_once 'models/producto.php';
@@ -80,7 +80,7 @@
                 </div>   
                                            
                 <div class="form__field form__field-pedido">
-                        <input type="submit" value="Enviar"  class="form__submit">
+                        <input type="submit" value="Registrar Compra"  class="form__submit">
                 </div>
                 
         </form>

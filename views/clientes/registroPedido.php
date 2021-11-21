@@ -16,12 +16,12 @@
         <form action="<?php echo constant('URL') ?>pedidos/registrarPedido" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label class="form__label">Cliente</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Cliente: </label>
                     <input type="list"  value="<?php echo $cliente->getNombre().'-'.$cliente->getId(); ?>" name="cliente" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="name" class="form__label">Vendedor</label>
+                <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Vendedor: </label>
                     <!-- <input type="text" id="form-name"  name="name" class="form__input"> -->
                     <input type="list" list="empleados" name ="empleado" autocomplete = "off">
                     <datalist id="empleados">
@@ -33,8 +33,8 @@
                         <?php } ?>
                     </datalist>
                 </div>
-                <div class="form__field">
-                    <label for="locales" class="form__label">Local</label>
+                <div class="form__field form__field-50">
+                    <label for="locales" class="form__label">Local: </label>
                     <!-- <input type="text" id="form-surname"  name="surname" required class="form__input"> -->
                     <input  type="list" list="locales" name ="local" autocomplete = "off">
                     <datalist id="locales">
@@ -46,12 +46,12 @@
                         <?php } ?>
                     </datalist>
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
                     <input type="list" name ="fecha">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Producto-Código</label>
+                <div class="form__field form__field-100">
+                    <label for="email" class="form__label">Producto-Código: </label>
                     <!-- <input type="text" id="form-email"  name="dni"  required class="form__input"> -->
                     <input id="datalist-id" type="list"  list="productos" name ="producto" autocomplete = "off">
                     <datalist id="productos">
@@ -95,7 +95,7 @@
                 </div>   
                                            
                 <div class="form__field form__field-pedido">
-                        <input type="submit" value="Enviar"  class="form__submit">
+                        <input type="submit" value="Registrar Pedido"  class="form__submit">
                 </div>
                 
         </form>
@@ -220,9 +220,7 @@
                         pedidos.appendChild(fragment)
                         */
                 })
-                .catch((error) => console.log(`Error : ${error.message}`))
-            
-                
+                .catch((error) => console.log(`Error : ${error.message}`))     
 
         })
         const borrar = document.getElementById('deleteP')

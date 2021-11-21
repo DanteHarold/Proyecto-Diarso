@@ -10,18 +10,17 @@
             //var_dump($url);
             //Cuando se Ingresa sin definir Controlador
             if(empty($url[0])){
-                $archivoController = 'controllers/main.php';
+                $archivoController = 'controllers/login.php';
                 require_once $archivoController;
-                $controller = new Main();
-                $controller->loadModel('main');
+                $controller = new login();
+                $controller->loadModel('login');
                 $controller->render();
                 return false;
             }
             
             $archivoController = 'controllers/'.$url[0].'.php';
             
-            if(file_exists($archivoController)){
-
+            if(file_exists($archivoController)){            
                 require_once $archivoController;
                 //inicializa Controlador
                 $controller = new $url[0];
@@ -43,7 +42,6 @@
                 }else{
                     $controller->render();
                 }
-
                 //Si hay método que se requiere cargar
                 //if(isset($url[1])){
                     //Llama al metódo -> convierte a metodo

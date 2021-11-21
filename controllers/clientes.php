@@ -9,9 +9,14 @@
             $this->view->datosLocales = [];
             $this->view->datosEmpleados = [];
             $this->view->product = [];
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
+            
             $clientes = $this->model->get();
             $this->view->datos = $clientes;
             $this->view->mensaje = "";
@@ -55,7 +60,7 @@
             $clientes = $this->model->get();
             $this->view->datos = $clientes;
             
-            session_start();
+            
             $_SESSION['id_cliente'] =  $idCliente;
             $this->view->mensaje = "DETALLE DEL Usuario ".$_SESSION['id_cliente'] ;
             
@@ -70,14 +75,13 @@
             $clientes = $this->model->get();
             $this->view->datos = $clientes;
 
-            session_start();
+            
             $_SESSION['id_cliente'] =  $idCliente;
             $this->view->mensaje = "ACTUALIZANDO Usuarios ".$_SESSION['id_cliente'] ;
 
             $this->view->render('clientes/editar');
         }
         function editarCliente(){
-            session_start();
             $idCliente =  $_SESSION['id_cliente'];
             $name =     $_POST['name'];
             $surname =  $_POST['surname'];

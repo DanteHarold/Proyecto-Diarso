@@ -59,18 +59,25 @@
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid red;
+    // border: 1px solid red;
     text-align: center;
 }
 .btn-agregar{
     background-color: rgb(252, 199, 224);
-    width: 80px;
-    height: 25px;
-    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
     box-shadow: 1px 1px rgb(192, 180, 180);
+    cursor: pointer;
+    margin-top: 12px;
     a{
         text-decoration: none;
         color: $text-color;
+        font-family: $main-title;
+        font-weight: $medium-text;
     }
     p{  
         height: 5%;

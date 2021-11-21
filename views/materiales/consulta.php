@@ -16,24 +16,21 @@
         <form action="<?php echo constant('URL') ?>materiales/registrarMaterial" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label for="name" class="form__label">Descripcion</label>
+                <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Descripcion: </label>
                     <input type="text" id="form-name" disabled name="name" value="<?php echo $this->material->getDescripcion(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->material->getFecha(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Precio</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Precio: </label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->material->getPrecio(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Stock</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Stock: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->material->getStock(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>  
         </form>

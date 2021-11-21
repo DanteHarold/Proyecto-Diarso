@@ -16,28 +16,28 @@
         <form action="<?php echo constant('URL') ?>pedidos/registrarPedido" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label class="form__label">Id-Pedido</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Id-Pedido: </label>
                     <input type="list"  value="<?php echo $pedido->getId();?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Cliente</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Cliente: </label>
                     <input  value="<?php echo $this->cliente->getNombre().'-'.$this->cliente->getId(); ?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Empleado</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Empleado: </label>
                     <input type="list"  value="<?php echo $this->empleado2->getNombre().'-'.$this->empleado2->getId(); ?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Local</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Local: </label>
                     <input  value="<?php echo $this->local2->getNombre().'-'.$this->local2->getId(); ?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Fecha: </label>
                     <input type="list"  value="<?php echo $this->pedido->getFecha();?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Producto</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Producto: </label>
                     <input  value="<?php echo $this->producto->getDescripcion().'-'.$this->producto->getId(); ?>"  class="form__input">
                 </div>
                 <div class="content-pedido">
@@ -58,7 +58,7 @@
                                     </p>
                                 </div>
                         </div>    
-            </div>                                   
+                </div>                                   
         </form>
     </div>
     <?php require_once 'views/footer.php';?>

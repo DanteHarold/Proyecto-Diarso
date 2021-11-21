@@ -10,6 +10,11 @@
             $this->view->datosProductos = [];
             $this->view->datosLocales = [];
             $this->view->datosEmpleados = [];
+
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -134,7 +139,7 @@
             $pedidos = $this->model->get();
             $this->view->datos = $pedidos;
             
-            session_start();
+            
             $_SESSION['id_pedido'] =  $idPedido;
             $this->view->mensaje = "DETALLE DEL PEDIDO ".$_SESSION['id_pedido'] ;
             
@@ -146,7 +151,7 @@
             require_once 'models/empleadosmodel.php';
             $empleado = new empleadosModel();
             $this->view->empleado2  = $empleado->getById($pedido->getIdEmpleado());
-            echo $this->view->empleado2->getNombre();
+            // echo $this->view->empleado2->getNombre();
 
             require_once 'models/localesmodel.php';
             $local = new LocalesModel();
@@ -156,8 +161,8 @@
             require_once 'models/detallepedidosModel.php';
             $detallePedido = new detallepedidosModel();
             $this->view->detallePedido  = $detallePedido->getByIdPedido($pedido->getId());
-            echo $this->view->detallePedido->getCantidad();
-            echo $this->view->detallePedido->getTotal();
+            // echo $this->view->detallePedido->getCantidad();
+            // echo $this->view->detallePedido->getTotal();
             require_once 'models/productosmodel.php';
             $producto = new productosModel();
             $this->view->producto  = $producto->getById($this->view->detallePedido->getIdProducto());

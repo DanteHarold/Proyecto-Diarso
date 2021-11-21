@@ -16,24 +16,24 @@
         <form action="<?php echo constant('URL') ?>pedidos/registrarPedido" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label class="form__label">Id-Compra</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Id-Compra: </label>
                     <input type="list"  value="<?php echo $compra->getId();?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Empleado</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Empleado: </label>
                     <input  value="<?php echo $this->empleado->getNombre().'-'.$this->empleado->getId(); ?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Proveedor</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Proveedor: </label>
                     <input type="list"  value="<?php echo $this->proveedor->getNombre().'-'.$this->proveedor->getId(); ?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label class="form__label">Fecha: </label>
                     <input type="list"  value="<?php echo $this->compra->getFecha();?>"  class="form__input">
                 </div>
-                <div class="form__field">
-                    <label class="form__label">Material</label>
+                <div class="form__field form__field-100">
+                    <label class="form__label">Material: </label>
                     <input  value="<?php echo $this->material->getDescripcion().'-'.$this->material->getId(); ?>"  class="form__input">
                 </div>
                 <div class="content-pedido">

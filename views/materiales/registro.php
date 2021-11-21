@@ -16,24 +16,24 @@
         <form action="<?php echo constant('URL') ?>materiales/registrarMaterial" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-            <div class="form__field">
-                    <label for="name" class="form__label">Descripción</label>
+            <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Descripción: </label>
                     <input type="text" id="form-name"  name="name" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
                     <input type="text" id="form-surname"  name="fecha" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Precio</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Precio: </label>
                     <input type="text" id="form-email"  name="precio"  required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Stock</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Stock: </label>
                     <input type="number" id="form-surname"  name="stock"  required class="form__input">
                 </div>             
                 <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
+                    <input type="submit" value="Registrar Material"  class="form__submit">
                 </div>
             </div>          
             </div>  

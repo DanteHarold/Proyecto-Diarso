@@ -10,6 +10,10 @@
             $this->view->datosProductos = [];
             $this->view->datosLocales = [];
             $this->view->datosEmpleados = [];
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -106,7 +110,7 @@
             $idCompra = $param[0];
             $compra = $this->model->getById($idCompra);
             $this->view->compra = $compra;
-            echo $this->view->compra->getFecha();
+            //echo $this->view->compra->getFecha();
             /*
             echo $pedido->getId();
             echo '<br>';
@@ -119,7 +123,7 @@
             $compras = $this->model->get();
             $this->view->datos = $compras;
             
-            session_start();
+            
             $_SESSION['id_compra'] =  $idCompra;
             $this->view->mensaje = "DETALLE DEL PEDIDO ".$_SESSION['id_compra'] ;
             
@@ -131,7 +135,7 @@
             require_once 'models/proveedoresmodel.php';
             $proveedor = new proveedoresModel();
             $this->view->proveedor  = $proveedor->getById($compra->getIdProveedor());
-            echo $this->view->proveedor->getNombre();
+            //echo $this->view->proveedor->getNombre();
 
 
             //CARGAR LOS DATOS DEL DETALLE PEDIDO

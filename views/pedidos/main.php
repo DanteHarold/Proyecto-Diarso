@@ -10,11 +10,6 @@
                 <div class="search">
                     <input id="search-text" type="text" placeholder="Search User">
                 </div>
-                <div class="user-info">
-                <a href="<?php echo constant('URL').'usuarios/agregarUsuario'; ?>">                     
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
             </div>
         </div>
         <div class="content">

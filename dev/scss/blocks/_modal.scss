@@ -14,11 +14,11 @@
     }
     .form{     
         position: relative;
-
         background-color: $white-color;
         border: 1px solid red;
         height: 70%;
         width: 50%;
+        /*
         &__content{
             display: flex;
             flex-direction: column;
@@ -29,6 +29,7 @@
             height: calc(100% - 50px);
             top: 0;
         }
+        */
         &__title{
             border: 1px solid red;
             border-bottom: 1px solid black;

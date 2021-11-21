@@ -5,6 +5,11 @@
             parent::__construct();
             $this->view->mensaje = "";
             $this->view->datos = [];
+
+            require_once 'models/user_session.php';
+            require_once 'models/usuario.php';
+            $userSession = new userSession();
+            $this->view->username = $userSession->getCurrentUser();
         }
         function render(){
             //$productos = $this->view->datos = $this->model->get();
@@ -46,9 +51,8 @@
             $productos = $this->model->get();
             $this->view->datos = $productos;
             
-            session_start();
             $_SESSION['id_producto'] =  $idProducto;
-            $this->view->mensaje = "DETALLE DEL ALUMNO ".$_SESSION['id_producto'] ;
+            $this->view->mensaje = "DETALLE DEL PRODUCTO: ".$_SESSION['id_producto'] ;
             
             $this->view->render('productos/consulta');
         }
@@ -62,14 +66,12 @@
             $productos = $this->model->get();
             $this->view->datos = $productos;
 
-            session_start();
             $_SESSION['id_producto'] =  $idProducto;
-            $this->view->mensaje = "ACTUALIZANDO ALUMNO ".$_SESSION['id_producto'] ;
+            $this->view->mensaje = "Actualizando Producto : ".$_SESSION['id_producto'] ;
 
             $this->view->render('productos/editar');
         }
         function editarProducto(){
-            session_start();
             $idProducto =  $_SESSION['id_producto'];
             $descripcion =     $_POST['descripcion'];
             $categoria =  $_POST['categoria'];

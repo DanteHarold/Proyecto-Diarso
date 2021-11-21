@@ -17,20 +17,20 @@
         <form action="<?php echo constant('URL') ?>usuarios/editarUsuario" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje;?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label for="name" class="form__label">Nombre</label>
+                <div class="form__field form__field-100">
+                    <label for="name" class="form__label">Nombre: </label>
                     <input type="text" id="form-name"  name="name" value="<?php echo $this->usuario->getNombre(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Apellidos</label>
+                <div class="form__field form__field-100">
+                    <label for="surname" class="form__label">Apellidos: </label>
                     <input type="text" id="form-surname" name="surname" value="<?php echo $this->usuario->getApellido(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Correo</label>
+                <div class="form__field form__field-100">
+                    <label for="email" class="form__label">Correo Electronico : </label>
                     <input type="email" id="form-email"  name="email" value="<?php echo $this->usuario->getEmail(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar" class="form__submit">
+                <div class="form__field form__field-50">
+                    <input type="submit" value="Actualizar Usuario" class="form__submit">
                 </div>
             </div>  
         </form>

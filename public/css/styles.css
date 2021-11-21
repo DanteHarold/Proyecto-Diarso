@@ -189,7 +189,7 @@ template { display: none; }
 
 .content__producto a { text-decoration: none; }
 
-.content__producto .pedido { border: 1px solid red; border-radius: 15px; min-height: 100%; max-width: 80%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--dark-color); font-family: "Roboto"; font-weight: 500; background-color: #fcc7e0; margin: auto; }
+.content__producto .pedido { border: 1px solid red; border-radius: 15px; min-height: 75%; max-width: 70%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--dark-color); font-family: "Roboto"; font-weight: 500; background-color: #fcc7e0; margin-right: auto; margin-left: auto; margin-top: 2%; }
 
 .content-pedido { height: 40%; overflow-y: auto; }
 
@@ -217,13 +217,47 @@ template { display: none; }
 
 .content-pedido__pedido--options { grid-column: 5/-1; }
 
-.form__field-pedido { position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); border: 1px solid red; text-align: center; }
+.form__field-pedido { position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); text-align: center; }
 
-.btn-agregar { background-color: #fcc7e0; width: 80px; height: 25px; border-radius: 15px; box-shadow: 1px 1px #c0b4b4; }
+.btn-agregar { background-color: #fcc7e0; width: 100px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 10px; box-shadow: 1px 1px #c0b4b4; cursor: pointer; margin-top: 12px; }
 
-.btn-agregar a { text-decoration: none; color: var(--text-color); }
+.btn-agregar a { text-decoration: none; color: var(--text-color); font-family: "Poppins"; font-weight: 500; }
 
 .btn-agregar p { height: 5%; font-family: "Roboto"; font-weight: 400; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
+
+body { background: #D3CCE3; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.login-box { position: absolute; margin: auto; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 20%; height: 40%; }
+
+.login-box h1 { font-size: 40px; border-bottom: 3px solid #49914d; margin-bottom: 30px; padding: 10px 0; }
+
+.login-box .textbox { width: 100%; overflow: hidden; font-size: 20px; padding: 8px 0; margin: 8px 0; border-bottom: 1px solid #49914d; }
+
+.login-box .textbox i { width: 25px; text-align: center; }
+
+.login-box .textbox input { border: none; outline: none; background: none; color: white; font-size: 18px; width: 150px; margin: 0 10px; color: var(--dark-color); }
+
+.login-box .btn { width: 100%; background: none; border: 2px solid #49914d; color: white; padding: 5px; font-size: 18px; cursor: pointer; margin: 12px 0; color: var(--dark-color); }
+
+.login-box .btn:hover { border: 2px solid #49914d; }
+
+.form-register { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 95%; max-width: 500px; margin: auto; background: transparent; border-radius: 15px; }
+
+.form-title { background: transparent; color: var(--dark-color); padding: 20px; margin-top: 0; font-weight: 100; font-size: 30px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom: 5px solid #49914d; }
+
+.container-inputs { padding: 10px 30px; display: flex; /* COntenido que no entre se deslize hacia abajo */ flex-wrap: wrap; justify-content: space-between; }
+
+.container-inputs input { margin-bottom: 10px; padding: 10px; font-size: 16px; border-radius: 5px; border: 2px solid darkgray; }
+
+.input-50 { width: 48%; }
+
+.input-100 { width: 100%; }
+
+.btn-enviar { background-color: #49914d; color: white; margin: auto; padding: 10px 48px; cursor: pointer; transition: 1s; font-size: 18px; }
+
+.btn-enviar:active { transform: scale(1.1); }
+
+.form-link { text-decoration: none; bottom: 0; }
 
 .header { background-color: var(--background-color); position: relative; height: 60px; }
 
@@ -261,13 +295,13 @@ template { display: none; }
 
 .topbar__profile .img { margin: 0 5px; margin-left: 0; width: 45px; border-radius: 15px; }
 
-.topbar__profile .name { display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.topbar__profile .name { display: flex; align-items: center; justify-content: center; flex-direction: column; margin-left: 10px; }
 
 .topbar__profile .name__fisrt { font-family: "Poppins"; }
 
 .topbar__profile .name__job { font-family: "Roboto"; font-weight: 300; font-size: 11px; }
 
-.topbar .icon { font-size: 36px; margin-right: 15px; }
+.topbar .icon { font-size: 36px; margin-left: 0; margin-right: 15px; }
 
 .logo { position: fixed; width: 50px; height: 60px; font-size: 32px; left: 1%; display: flex; align-items: center; color: var(--dark-color); }
 
@@ -311,10 +345,30 @@ template { display: none; }
 
 .lightBox--show { transform: scale(1); }
 
-.lightBox .form { position: relative; background-color: var(--white-color); border: 1px solid red; height: 70%; width: 50%; }
-
-.lightBox .form__content { display: flex; flex-direction: column; align-items: center; justify-content: space-around; border: 1px solid red; margin-top: 0; height: calc(100% - 50px); top: 0; }
+.lightBox .form { position: relative; background-color: var(--white-color); border: 1px solid red; height: 70%; width: 50%; /* &__content{ display: flex; flex-direction: column; align-items: center; justify-content: space-around; border: 1px solid red; margin-top: 0; height: calc(100% - 50px); top: 0; } */ }
 
 .lightBox .form__title { border: 1px solid red; border-bottom: 1px solid black; margin: 0; height: 50px; padding-left: 1rem; font-family: "Roboto"; font-weight: 300; font-size: 1.3rem; display: flex; align-items: center; }
 
 .message { left: 50%; top: 50%; transform: translate(-50%, -50%); position: absolute; background-color: red; }
+
+.icon:hover a { color: var(--dark-color); text-decoration: none; display: block; margin-top: 3px; border-radius: 15px; width: 100%; }
+
+.icon:hover a:hover { background-color: #ccc7c7; }
+
+.icon .nav { background-color: transparent; font-size: 12px; font-family: "Poppins"; font-weight: 300; position: absolute; top: 60px; margin: 0; width: 110px; padding: 0; list-style: none; left: 100%; transform: translateX(-100%); text-align: center; height: 40px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+
+.icon a { display: none; }
+
+.form__content { display: flex; flex-wrap: wrap; justify-content: space-evenly; height: 90%; width: 95%; margin-right: auto; margin-left: auto; margin-top: 2%; }
+
+.form__content input { padding: 10px; font-size: 16px; border-radius: 5px; border: 2px solid darkgray; }
+
+.form__content .form__field { margin-bottom: 10%; height: 8%; margin: auto; }
+
+.form__content .form__field-100 { width: 90%; padding: 20px; }
+
+.form__content .form__field-100 input { width: 80%; }
+
+.form__content .form__field-50 { width: 48%; padding: 20px; }
+
+.form__content .form__field-50 input { width: 65%; }

@@ -16,44 +16,41 @@
         <form action="<?php echo constant('URL') ?>clientes/registrarCliente" id="form-modal" class="form" method="POST">
             <h2 class="form__title"><?php echo $this->mensaje; ?></h2>
             <div class="form__content">
-                <div class="form__field">
-                    <label for="name" class="form__label">Nombre</label>
+                <div class="form__field form__field-50">
+                    <label for="name" class="form__label">Nombre: </label>
                     <input type="text" id="form-name" disabled name="name" value="<?php echo $this->cliente->getNombre(); ?>" class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Apellidos</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Apellidos: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->cliente->getApellido(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Dni</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Dni: </label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->cliente->getDni(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Fecha</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Fecha: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->cliente->getFecha(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Ciudad</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Ciudad: </label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->cliente->getCiudad(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Provincia</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Provincia: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->cliente->getProvincia(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Direccion</label>
+                <div class="form__field form__field-50">
+                    <label for="email" class="form__label">Direccion: </label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->cliente->getDireccion(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="surname" class="form__label">Email</label>
+                <div class="form__field form__field-50">
+                    <label for="surname" class="form__label">Email: </label>
                     <input type="text" id="form-surname" disabled name="surname" value="<?php echo $this->cliente->getEmail(); ?>" required class="form__input">
                 </div>
-                <div class="form__field">
-                    <label for="email" class="form__label">Telefono</label>
+                <div class="form__field form__field-100">
+                    <label for="email" class="form__label">Telefono: </label>
                     <input type="email" id="form-email" disabled name="email" value="<?php echo $this->cliente->getTelefono(); ?>" required class="form__input">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Enviar"  class="form__submit">
                 </div>
             </div>  
         </form>
